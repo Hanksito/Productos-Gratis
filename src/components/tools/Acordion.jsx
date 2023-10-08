@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const AccordionContainer = styled.div``;
+const AccordionContainer = styled.div`
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+`;
 
 const AccordionItem = styled.div`
  width: 100%;

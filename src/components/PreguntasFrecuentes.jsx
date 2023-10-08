@@ -22,11 +22,17 @@ const H1F = styled.h1`
  color: #1b2845;
  margin-bottom: 71px;
 `;
+const Div = styled.div`
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+`;
 
 const PreguntasFrecuentes = () => {
  return (
   <Container>
-   <div>
+   <Div>
     <H1F>PREGUNTAS FRECUENTES</H1F>
     <AccordionMenu
      titulo="¿Cómo puedo obtener productos gratis?"
@@ -60,7 +66,7 @@ const PreguntasFrecuentes = () => {
      titulo="¿Cómo puedo contactar al servicio al cliente para obtener ayuda?"
      contenido="Para obtener productos gratis, simplemente crea una cuenta y realiza una compra de cualquiera de nuestros productos seleccionados en la sección de Catálogo de Productos. Una vez realizada la compra, sigue las instrucciones para recibir un reembolso completo a través de Bizum."
     />
-   </div>
+   </Div>
   </Container>
  );
 };

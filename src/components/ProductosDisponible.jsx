@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Card from "./tools/Card";
-
+import Modal from "./tools/Modal";
 
 const Container = styled.div`
  max-width: 1440px;
@@ -57,6 +57,8 @@ const ProductosDisponible = () => {
 
  return (
   <Container>
+   <Modal />
+
    <H1>PRODUCTOS DISPONIBLES</H1>
    <ItemContainer>
     {prueba.map(producto => {
