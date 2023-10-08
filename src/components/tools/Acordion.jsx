@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const AccordionContainer = styled.div`
- width: 100%;
-`;
+const AccordionContainer = styled.div``;
 
 const AccordionItem = styled.div`
  width: 100%;
+ max-width: 880px;
  font-family: Mukta;
  font-size: 20px;
  font-weight: 400;
@@ -27,6 +26,7 @@ const AccordionItem = styled.div`
 const AccordionContent = styled.div`
  display: ${props => (props.isOpen ? "block" : "none")};
  width: 100%;
+ max-width: 880px;
  background-color: #fff;
  font-family: Mukta;
  font-size: 16px;

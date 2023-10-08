@@ -7,7 +7,7 @@ const Container = styled.div`
  display: flex;
  justify-content: center;
  background: #fbfafa;
- padding: 80px 280px;
+ padding: 50px 100px;
  @media (max-width: 768px) {
   padding: 20px;
  }

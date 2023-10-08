@@ -3,6 +3,7 @@ import Headder from "./components/Headder";
 import NavbarC from "./components/Navbar";
 import ProductosDisponible from "./components/ProductosDisponible";
 import PreguntasFrecuentes from "./components/PreguntasFrecuentes";
+import Footer from "./components/Footer";
 
 const ContenedorPadre = styled.div`
  display: flex;
@@ -21,6 +22,9 @@ function App() {
    </ContenedorPadre>
    <ContenedorPadre>
     <PreguntasFrecuentes />
+   </ContenedorPadre>
+   <ContenedorPadre>
+    <Footer />
    </ContenedorPadre>
   </>
  );

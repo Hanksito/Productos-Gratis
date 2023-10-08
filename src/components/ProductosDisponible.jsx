@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Card from "./tools/Card";
 
+
 const Container = styled.div`
  max-width: 1440px;
  padding: 40px 100px;

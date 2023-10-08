@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const BackgroundRaro = styled.div`
  position: relative;
  background: #63c7b2;
- height: 658.92px;
+ height: 660px;
  width: 1444px;
  z-index: -1;
- top: 77.53px;
+ top: 76.53px;
  @media (max-width: 768px) {
   height: 1165.02px;
   width: 100%;
@@ -15,7 +15,7 @@ export const BackgroundRaro = styled.div`
 
 export const SVGWrapper = styled.div`
  position: absolute;
- bottom: -4px;
+ bottom: -6px;
  left: 0;
  right: 0;
  width: 100%;
