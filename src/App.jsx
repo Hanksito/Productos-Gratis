@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Headder from "./components/Headder";
 import NavbarC from "./components/Navbar";
+import ProductosDisponible from "./components/ProductosDisponible";
+import PreguntasFrecuentes from "./components/PreguntasFrecuentes";
+
 const ContenedorPadre = styled.div`
  display: flex;
  justify-content: center;
@@ -12,6 +15,12 @@ function App() {
    <NavbarC />
    <ContenedorPadre>
     <Headder />
+   </ContenedorPadre>
+   <ContenedorPadre>
+    <ProductosDisponible />
+   </ContenedorPadre>
+   <ContenedorPadre>
+    <PreguntasFrecuentes />
    </ContenedorPadre>
   </>
  );

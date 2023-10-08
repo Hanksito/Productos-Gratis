@@ -4,374 +4,55 @@ import cocacola from "../assets/cocacola.svg";
 import jarron from "../assets/jarron.svg";
 import libreta from "../assets/libreta.svg";
 import usb from "../assets/usb.svg";
+import {
+ BackgroundRaro,
+ SVGWrapper,
+ SVG,
+ ContainerHeadder,
+ Promo,
+ RectanguloH,
+ RectanguloT,
+ ProductosGratis,
+ AhoraSon,
+ Son,
+ Gratis,
+ TextoBlanco,
+ SectionLeft,
+ P,
+ Jarron,
+ Libreta,
+ Afila,
+ Cocacola,
+ Usb,
+ SectionRigth,
+ ItemSection,
+ H1Funciona,
+ Ph,
+ ContainerFunciona,
+ Item1,
+ Item2,
+ Pitem,
+ ItemSectionMobile,
+ Libreta2,
+ Afila2,
+ Cocacola2,
+ Usb2,
+ Jarron2,
+ ContendorItem,
+ Parrafo
+} from "./styleComponents/Headder.style";
 
-const BackgroundRaro = styled.div`
- position: relative;
- background: #63c7b2;
- height: 658.92px;
- width: 1444px;
- z-index: -1;
- top: 77.53px;
- @media (max-width: 768px) {
-  height: 1164.02px;
-  width: 100%;
- }
-`;
 
-const SVGWrapper = styled.div`
- position: absolute;
- bottom: -4px;
- left: 0;
- right: 0;
- width: 100%;
- height: auto;
- z-index: -1;
-`;
 
-const SVG = styled.svg`
- width: 100%;
- height: auto;
-`;
-const ContainerHeadder = styled.div`
- display: flex;
- justify-content: space-between;
- padding-top: 53px;
- padding-left: 19px;
- padding-right: 100px;
- @media (max-width: 768px) {
-  flex-direction: column;
-  padding-top: 23px;
-  padding-left: 19px;
-  padding-right: 19px;
- }
-`;
-const Promo = styled.h4`
- position: relative;
- color: #ffffff;
- font-family: "Bevan", serif;
- font-size: 20px;
- font-weight: 400;
- line-height: 19px;
- letter-spacing: 0em;
- text-align: left;
- left: 15px;
- top: 12px;
- transform: rotate(-2.02deg);
- @media (max-width: 768px) {
-  font-size: 14px;
-  line-height: 13px;
- }
-`;
-const RectanguloH = styled.div`
- width: 133.51px;
- height: 43.67px;
- transform: translate(10%, 0) rotate(2.02deg);
- background-color: #9857de;
- @media (max-width: 768px) {
-  width: 93.06px;
-  height: 30.44px;
-  transform: translate(10%, 1px) rotate(2.02deg);
- }
-`;
-const RectanguloT = styled.div`
- background: #9857de;
- width: 189.02px;
- height: 40.29px;
- top: 179.28px;
- left: 67.56px;
- transform: translate(-5%, 220%) rotate(-10.42deg);
- @media (max-width: 768px) {
-  width: 131.76px;
-  height: 28.08px;
-  top: 134.74px;
-  left: 22.46px;
-  transform: translate(-5%, 237%) rotate(-10.42deg);
- }
-`;
-const ProductosGratis = styled.h1`
- font-family: "Bevan", serif;
- font-size: 68px;
- font-style: italic;
- font-weight: 400;
- line-height: 60px;
- letter-spacing: 0em;
- width: 520px;
- height: 173px;
- top: 194.34px;
- left: 100px;
- transform: translate(5%, -19%);
- @media (max-width: 768px) {
-  width: 362.47px;
-  height: 120px;
-  font-size: 42px;
-  line-height: 42px;
-  letter-spacing: 0em;
-  text-align: left;
- }
-`;
-const AhoraSon = styled.span`
- display: flex;
- flex-direction: column;
- text-align: left;
- font-family: Bevan;
- font-size: 30px;
- font-style: italic;
- font-weight: 400;
- line-height: 28px;
- letter-spacing: 0em;
- text-align: left;
- color: #ffffff;
- @media (max-width: 768px) {
-  font-family: Bevan;
-  font-size: 21px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
- }
-`;
-const Son = styled.span`
- transform: translate(37%, -0);
 
- @media (max-width: 768px) {
-  transform: translate(3%, -0);
- }
-`;
-const Gratis = styled.span`
- color: #ffffff;
- font-style: normal;
- @media (max-width: 768px) {
-  padding-left: 5px;
-  font-size: 47px;
-  font-weight: 400;
-  line-height: 42px;
-  letter-spacing: 0em;
-  text-align: left;
- }
-`;
-const TextoBlanco = styled.div`
- display: flex;
-`;
-const SectionLeft = styled.div`
- max-width: 616px;
- width: 50%;
- height: 648px;
- margin-left: 19px;
- transform: translate(0, -50px);
- @media (max-width: 768px) {
-  margin-left: 0;
-  transform: translate(4, -70px);
-  display: flex;
-  width: 100%;
- }
-`;
-const P = styled.p`
- font-family: Mukta;
- font-size: 20px;
- font-weight: 400;
- line-height: 26px;
- letter-spacing: 0em;
- text-align: center;
- width: 530px;
- color: #ffffff;
- margin: 0;
- transform: translate(10px, -50px);
- @media (max-width: 768px) {
-  margin-left: 5px;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 0em;
-  text-align: left;
-  width: 360px;
-  height: 39px;
-  transform: translate(-2px, -30px);
- }
-`;
-const Jarron = styled.img`
- width: 130.75px;
- height: 231.37px;
- transform: translate(-15%);
-`;
 
-const Libreta = styled.img`
- width: 162.26px;
- height: 223.98px;
- margin-left: 20px;
-`;
-const Afila = styled.img`
- width: 171.21px;
- height: 157.79px;
- transform: translate(-15%, -95%);
-`;
-const Cocacola = styled.img`
- width: 106.22px;
- height: 294.85px;
- transform: translate(-50%, 0);
-`;
-const Usb = styled.img`
- width: 272.4px;
- height: 204.42px;
- transform: translate(500px, -233px);
-`;
-const SectionRigth = styled.div`
- width: 616px;
- height: 648px;
- border-radius: 40px;
- border: 7px solid #63c7b2;
- background-color: #f5edf0;
- box-shadow: 0px 44px 64px -50px #7494ea80;
- z-index: 5;
- @media (max-width: 768px) {
-  width: 90%;
-  height: 710px;
-  position: absolute;
-  top: 295px;
-  border: none;
- }
-`;
-const ItemSection = styled.div`
- transform: translate(0, -5%);
- @media (max-width: 768px) {
-  display: none;
- }
-`;
 
-const H1Funciona = styled.h1`
- width: 299px;
- height: 23px;
- font-family: Bevan;
- font-size: 29px;
- font-weight: 400;
- line-height: 29px;
- letter-spacing: 0em;
- text-align: left;
- padding-left: 38px;
- padding-top: 40px;
- margin: 0;
- @media (max-width: 768px) {
-  padding-left: 18px;
-  padding-top: 22px;
- }
-`;
-const Ph = styled.p`
- font-family: Mukta;
- font-size: 16px;
- font-weight: 300;
- line-height: 22px;
- letter-spacing: 0em;
- text-align: left;
- width: 540px;
- height: 10px;
- padding-left: 38px;
- padding-top: 30px;
- margin: 0;
- @media (max-width: 768px) {
-  width: 354px;
-  padding-bottom: 30px;
-  padding-left: 18px;
-  padding-top: 22px;
- }
-`;
 
-const ContainerFunciona = styled.div`
- position: relative;
- max-width: 500px;
- width: 100%;
- height: 455px;
- gap: 10px;
- padding-left: 31px;
- padding-top: 30px;
- @media (max-width: 768px) {
-  padding-left: 0;
-  margin-right: 0;
-  padding-top: 0;
- }
-`;
-const Item1 = styled.div`
- border-radius: 20px;
- gap: 30px;
- background-color: #ffffff;
- margin-bottom: 10px;
- margin-left: 5px;
- text-align: center;
- @media (max-width: 768px) {
-  margin: 12px 22px;
-  padding: 20px;
- }
-`;
-const Item2 = styled(Item1)`
- @media (max-width: 768px) {
- }
-`;
-const Pitem = styled.h2`
- font-family: Mukta;
- font-size: 22px;
- font-weight: 800;
- line-height: 26px;
- letter-spacing: -0.03em;
- text-align: left;
-`;
 
-const ItemSectionMobile = styled(ItemSection)`
- display: none;
- z-index: 200;
- @media (max-width: 768px) {
-  display: block;
- }
-`;
-const Libreta2 = styled.img`
- position: absolute;
- top: 350.77px;
- width: 107.92px;
- height: 148.97px;
- left: 50px;
- transform: rotate(-25.26deg);
- z-index: -1;
-`;
-const Afila2 = styled.img`
- position: absolute;
- width: 113.87px;
- height: 104.95px;
- top: 340.77px;
- right: 50px;
-`;
-const Cocacola2 = styled.img`
- width: 70.65px;
- height: 196.1px;
- position: absolute;
- top: 350.77px;
- right: 150px;
-`;
-const Usb2 = styled.img`
- width: 170.18px;
- height: 124.96px;
- position: absolute;
- top: 400.77px;
- right: -10px;
- transform: rotate(-10.08deg);
-`;
-const Jarron2 = styled.img`
- width: 86.96px;
- height: 153.89px;
- position: absolute;
- top: 380.77px;
- left: -5px;
-`;
-const ContendorItem = styled.div`
- display: flex;
- gap: 20px;
- align-items: center;
-`;
-const Parrafo = styled.p`
- font-family: Mukta;
- font-size: 16px;
- font-weight: 300;
- line-height: 22px;
- letter-spacing: 0em;
- text-align: left;
- margin-bottom: 0;
- margin-top: 0;
-`;
+
+
+
+
 const Headder = () => {
  return (
   <BackgroundRaro>
