@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 const ContainerModal = styled.div`
+
+background-color: rgba(27, 40, 69, 0.9);
+width: 100%;
+height: 100%;
  position: absolute;
  display: flex;
  justify-content: center;
@@ -88,11 +92,12 @@ const SubmitButton = styled.button`
  border-radius: 6px;
  padding: 20px, 30px, 20px, 30px;
 `;
-const Modal = () => {
+const Modal = ({setOpen}) => {
+    console.log
  return (
   <ContainerModal>
    <ModalContent>
-    <CloseIcon>
+    <CloseIcon onClick={()=>setOpen(false)}>
      <svg
       width="32"
       height="32"

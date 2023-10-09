@@ -57,7 +57,6 @@ const ProductosDisponible = () => {
 
  return (
   <Container>
-   <Modal />
 
    <H1>PRODUCTOS DISPONIBLES</H1>
    <ItemContainer>

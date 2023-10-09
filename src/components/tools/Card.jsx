@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import coca from "../../assets/coca.svg";
+import { useState } from "react";
+import Modal from "./Modal";
+
 const CardContainer = styled.div`
  min-width: 285px;
  height: 400px;
@@ -52,13 +55,15 @@ const BtnText = styled.span`
 `;
 
 const Card = ({ producto }) => {
+    const [open , setOpen] = useState(false)
  return (
   <CardContainer>
+    {open && <Modal setOpen={setOpen} producto={producto}/>}
    <ImgContainer>
     <img src={coca} alt="" />
    </ImgContainer>
    <PCard>Coca-Cola sabor original 330ml</PCard>
-   <Btn>
+   <Btn onClick={ ()=>{setOpen(true)}}>
     <BtnText>lo quiero</BtnText>
 
     <svg
