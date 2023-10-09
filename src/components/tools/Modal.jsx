@@ -1,10 +1,10 @@
+import { useForm } from "react-hook-form";
 import styled from "styled-components";
 
 const ContainerModal = styled.div`
-
-background-color: rgba(27, 40, 69, 0.9);
-width: 100%;
-height: 100%;
+ background-color: rgba(27, 40, 69, 0.9);
+ width: 100%;
+ height: 100%;
  position: absolute;
  display: flex;
  justify-content: center;
@@ -16,6 +16,8 @@ height: 100%;
  transform: translate(-50%, -50%);
 `;
 const ModalContent = styled.div`
+ max-width: 590px;
+ min-height: 549px;
  padding: 10px;
  display: flex;
  flex-direction: column;
@@ -59,6 +61,15 @@ const InputForm = styled.input`
  border: 1px solid #ffffff;
  background-color: transparent;
  min-height: 51px;
+ color: #ffffff;
+ padding: 10px;
+ color: #ffffff;
+ font-family: Mukta;
+ font-size: 18px;
+ font-weight: 400;
+ line-height: 30px;
+ letter-spacing: 0em;
+ text-align: left;
  &::placeholder {
   padding: 10px;
   color: #ffffff;
@@ -71,7 +82,7 @@ const InputForm = styled.input`
  }
 `;
 
-const FormInputs = styled.form`
+const ContainerInputs = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: space-between;
@@ -92,12 +103,28 @@ const SubmitButton = styled.button`
  border-radius: 6px;
  padding: 20px, 30px, 20px, 30px;
 `;
-const Modal = ({setOpen}) => {
-    console.log
+const Modal = ({ setOpen, producto }) => {
+ const { register, handleSubmit } = useForm();
+
+ const onSubmit = data => {
+  data.producto = producto.id;
+  const options = {
+   method: "POST",
+   body: JSON.stringify(data),
+   headers: {
+    "Accept": "*/*",
+    "Content-Type": "application/json"
+   }
+  };
+  fetch("https://regalocompra.com/api/v1/registro", options).then(res =>
+   console.log(res)
+  );
+ };
+
  return (
   <ContainerModal>
    <ModalContent>
-    <CloseIcon onClick={()=>setOpen(false)}>
+    <CloseIcon onClick={() => setOpen(false)}>
      <svg
       width="32"
       height="32"
@@ -112,18 +139,33 @@ const Modal = ({setOpen}) => {
     </CloseIcon>
 
     <Content>
-     <H5>ingresa TU información</H5>
+     <H5>INGRESA TU INFORMACION</H5>
      <P>
       Tu información es segura con nosotros, y garantizamos un proceso rápido y
       confiable.
      </P>
-     <form>
-      <FormInputs>
-       <InputForm type="text" placeholder="Nombres y apellido" required />
-       <InputForm type="email" placeholder="Correo electrónico" required />
-       <InputForm type="text" placeholder="Número de Bizum" required />
-      </FormInputs>
-      <SubmitButton>Solicitar Bizum</SubmitButton>
+     <form onSubmit={handleSubmit(onSubmit)}>
+      <ContainerInputs>
+       <InputForm
+        type="text"
+        placeholder="Nombres y apellido"
+        required
+        {...register("nombre")}
+       />
+       <InputForm
+        type="email"
+        placeholder="Correo electrónico"
+        required
+        {...register("email")}
+       />
+       <InputForm
+        type="text"
+        placeholder="Número de Bizum"
+        required
+        {...register("telefono")}
+       />
+      </ContainerInputs>
+      <SubmitButton type="submit">Solicitar Bizum</SubmitButton>
      </form>
     </Content>
    </ModalContent>

@@ -5,6 +5,7 @@ import Modal from "./Modal";
 
 const CardContainer = styled.div`
  min-width: 285px;
+ max-width: 290px;
  height: 400px;
  padding: 15px;
  border-radius: 40px;
@@ -29,6 +30,13 @@ const PCard = styled.p`
  line-height: 26px;
  letter-spacing: 0em;
  text-align: center;
+ overflow: hidden;
+ text-overflow: ellipsis;
+`;
+const Img = styled.img`
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
 `;
 const Btn = styled.button`
  color: #f5edf0;
@@ -55,15 +63,19 @@ const BtnText = styled.span`
 `;
 
 const Card = ({ producto }) => {
-    const [open , setOpen] = useState(false)
+ const [open, setOpen] = useState(false);
+ const { id, texto, foto } = producto;
  return (
   <CardContainer>
-    {open && <Modal setOpen={setOpen} producto={producto}/>}
+   {open && <Modal setOpen={setOpen} producto={producto} />}
    <ImgContainer>
-    <img src={coca} alt="" />
+    <Img src={foto} alt={texto} />
    </ImgContainer>
-   <PCard>Coca-Cola sabor original 330ml</PCard>
-   <Btn onClick={ ()=>{setOpen(true)}}>
+   <PCard>{texto}</PCard>
+   <Btn
+    onClick={() => {
+     setOpen(true);
+    }}>
     <BtnText>lo quiero</BtnText>
 
     <svg
