@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Card from "./tools/Card";
 import Modal from "./tools/Modal";
+import { useState, useEffect } from "react";
 
 const Container = styled.div`
  max-width: 1440px;
@@ -51,21 +52,35 @@ const BtnMore = styled.button`
 `;
 
 const ProductosDisponible = () => {
- // a la espera de ver como llegan los datos del backend
+ const [count, setCount] = useState(0);
+ const [pedidos, setPedidos] = useState([]);
 
- const prueba = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+ const pedidosBack = async () => {
+  const respuesta = await fetch(
+   `https://regalocompra.com/api/v1/productos/12/0`
+  );
+  const data = await respuesta.json();
+  setPedidos(prevPedidos => [...prevPedidos, ...data.productos]);
+ };
+
+ useEffect(() => {
+  pedidosBack();
+ }, [count]);
 
  return (
   <Container>
-
    <H1>PRODUCTOS DISPONIBLES</H1>
    <ItemContainer>
-    {prueba.map(producto => {
+    {pedidos.map(producto => {
      return <Card producto={producto} />;
     })}
    </ItemContainer>
-   {/* Y esto mas de lo mismo  */}
-   <BtnMore>Ver más productos</BtnMore>
+   <BtnMore
+    onClick={() => {
+     setCount(count + 1);
+    }}>
+    Ver más productos
+   </BtnMore>
   </Container>
  );
 };

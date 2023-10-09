@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import coca from "../../assets/coca.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 const CardContainer = styled.div`
