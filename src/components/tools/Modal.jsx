@@ -124,7 +124,7 @@ const Modal = ({ setOpen, producto }) => {
   fetch("https://regalocompra.com/api/v1/registro", options)
    .then(res => res.json())
    .then(data => {
-    if (data.mensajes < 0) {
+    if (data.error === 0) {
      Swal.fire({
       title: "Registro exitoso",
       text: "El registro se ha realizado con éxito.",
@@ -135,10 +135,25 @@ const Modal = ({ setOpen, producto }) => {
        setOpen(false);
       }
      });
+    } else {
+     Swal.fire({
+      title: "Error en el formulario",
+      text: "Por favor, verifica los campos marcados como incorrectos.",
+      icon: "error",
+      confirmButtonText: "Aceptar"
+     });
     }
+   })
+   .catch(error => {
+    console.error("Error de solicitud:", error);
+    Swal.fire({
+     title: "Error en la solicitud",
+     text: "Hubo un problema al procesar la solicitud.",
+     icon: "error",
+     confirmButtonText: "Aceptar"
+    });
    });
- };
-
+ }
  return (
   <ContainerModal>
    <ModalContent>
