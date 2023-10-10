@@ -65,8 +65,6 @@ const BtnText = styled.span`
 const Card = ({ producto }) => {
  const [open, setOpen] = useState(false);
  const { id, texto, foto } = producto;
-
- c;
  return (
   <CardContainer>
    {open && <Modal setOpen={setOpen} producto={producto} />}
