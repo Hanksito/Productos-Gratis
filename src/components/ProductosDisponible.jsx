@@ -70,6 +70,7 @@ const ProductosDisponible = () => {
 
  return (
   <Container>
+   <H1>PRODUCTOS DISPONIBLES</H1>
    <ItemContainer>
     {pedidos.map((producto, index) => {
      return <Card key={index} producto={producto} />;

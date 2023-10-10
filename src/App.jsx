@@ -13,15 +13,25 @@ const ContenedorPadre = styled.div`
 const WhatsappIcon = styled.div`
  position: fixed;
  bottom: 20px;
- right: 20%;
  z-index: 999;
- max-width: 1000px;
+ right: 8%;
+ max-width: 1440px;
+ width: 100%;
+ display: flex;
+ justify-content: end;
+ @media (max-width: 768px) {
+  right: 5%;
+ }
 `;
 
 const IconImage = styled.img`
- width: 50px;
- height: 50px;
+ width: 90px;
+ height: 90px;
  background: transparent;
+ @media (max-width: 768px) {
+  width: 50px;
+  height: 50px;
+ }
 `;
 
 function App() {
@@ -39,15 +49,16 @@ function App() {
    <ContenedorPadre>
     <Footer />
    </ContenedorPadre>
-
-   <WhatsappIcon>
-    <a
-     href="https://api.whatsapp.com/send?phone=621315087"
-     target="_blank"
-     rel="noopener noreferrer">
-     <IconImage src={whatsapp} alt="WhatsApp" />
-    </a>
-   </WhatsappIcon>
+   <ContenedorPadre>
+    <WhatsappIcon>
+     <a
+      href="https://api.whatsapp.com/send?phone=621315087"
+      target="_blank"
+      rel="noopener noreferrer">
+      <IconImage src={whatsapp} alt="WhatsApp" />
+     </a>
+    </WhatsappIcon>
+   </ContenedorPadre>
   </>
  );
 }
