@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const BackgroundRaro = styled.div`
  position: relative;
  background: #63c7b2;
- height: 660px;
+ height: 650px;
  width: 1444px;
  z-index: -1;
- top: 76.53px;
+ top: 0px;
  @media (max-width: 768px) {
-  height: 1165.02px;
+  height: 700.02px;
   width: 100%;
  }
 `;
@@ -153,7 +153,7 @@ export const TextoBlanco = styled.div`
 export const SectionLeft = styled.div`
  max-width: 616px;
  width: 50%;
- height: 648px;
+ height: 300px;
  margin-left: 19px;
  transform: translate(0, -50px);
  @media (max-width: 768px) {
@@ -256,19 +256,19 @@ export const Ph = styled.p`
  text-align: left;
  width: 540px;
  height: 10px;
- padding-top: 30px;
+ padding-top: 7px;
  margin: 0;
  @media (max-width: 768px) {
   width: 354px;
-  padding-bottom: 30px;
+  padding-bottom: 7px;
 
-  padding-top: 22px;
+  padding-top: 7px;
  }
 `;
 
 export const ContainerFunciona = styled.div`
  position: relative;
- margin-top: 30px;
+ margin-top: 10px;
 `;
 export const Item1 = styled.div`
  border-radius: 20px;
@@ -276,10 +276,10 @@ export const Item1 = styled.div`
  background-color: #ffffff;
  text-align: center;
  margin-top: 10px;
- padding: 30px;
+ padding: 5px;
  @media (max-width: 768px) {
-  margin-top: 12px;
-  padding: 20px;
+  margin-top: 5px;
+  padding: 5px;
  }
 `;
 export const Item2 = styled(Item1)`
@@ -315,8 +315,9 @@ export const Afila2 = styled.img`
  position: absolute;
  width: 113.87px;
  height: 104.95px;
- top: 340.77px;
+ top: 540.77px;
  right: 50px;
+ z-index: -1;
 `;
 export const Cocacola2 = styled.img`
  width: 70.65px;
@@ -342,8 +343,9 @@ export const Jarron2 = styled.img`
 `;
 export const ContendorItem = styled.div`
  display: flex;
- gap: 20px;
+ gap: 5px;
  align-items: center;
+ padding:10px;
 `;
 export const Parrafo = styled.p`
  font-family: Mukta;
@@ -354,4 +356,5 @@ export const Parrafo = styled.p`
  text-align: left;
  margin-bottom: 0;
  margin-top: 0;
+ margin-left: 18px;
 `;

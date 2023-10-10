@@ -17,9 +17,8 @@ const H1 = styled.h1`
  line-height: 29px;
  letter-spacing: 0em;
  text-align: left;
- margin-top: 57px;
  width: 230px;
- margin-top: 190px;
+ margin-top: 5px;
  margin-bottom: 55px;
  margin-left: 35px;
  @media (max-width: 768px) {
@@ -57,7 +56,7 @@ const ProductosDisponible = () => {
 
  const pedidosBack = async () => {
   const respuesta = await fetch(
-   `https://regalocompra.com/api/v1/productos/12/0`
+   `https://regalocompra.com/api/v1/productos/8/0`
   );
   const data = await respuesta.json();
   setPedidos(prevPedidos => [...prevPedidos, ...data.productos]);
@@ -69,7 +68,6 @@ const ProductosDisponible = () => {
 
  return (
   <Container>
-   <H1>PRODUCTOS DISPONIBLES</H1>
    <ItemContainer>
     {pedidos.map(producto => {
      return <Card producto={producto} />;

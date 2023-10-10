@@ -6,7 +6,7 @@ import Modal from "./Modal";
 const CardContainer = styled.div`
  min-width: 285px;
  max-width: 290px;
- height: 400px;
+ height: 350px;
  padding: 15px;
  border-radius: 40px;
  display: flex;
@@ -18,8 +18,8 @@ const CardContainer = styled.div`
 const ImgContainer = styled.div`
  display: flex;
  justify-content: center;
- width: 265px;
- height: 265px;
+ width: 200px;
+ height: 200px;
  border-radius: 24px;
  background: #0000000d;
 `;
@@ -76,7 +76,7 @@ const Card = ({ producto }) => {
     onClick={() => {
      setOpen(true);
     }}>
-    <BtnText>lo quiero</BtnText>
+    <BtnText>Lo quiero</BtnText>
 
     <svg
      width="12"
