@@ -124,7 +124,18 @@ const Modal = ({ setOpen, producto }) => {
   fetch("https://regalocompra.com/api/v1/registro", options)
    .then(res => res.json())
    .then(data => {
-console.log(data);
+    if (data.mensajes < 0) {
+     Swal.fire({
+      title: "Registro exitoso",
+      text: "El registro se ha realizado con éxito.",
+      icon: "success",
+      confirmButtonText: "Aceptar"
+     }).then(result => {
+      if (result.isConfirmed) {
+       setOpen(false);
+      }
+     });
+    }
    });
  };
 
