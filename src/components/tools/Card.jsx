@@ -31,7 +31,9 @@ const PCard = styled.p`
  letter-spacing: 0em;
  text-align: center;
  overflow: hidden;
+ padding-bottom: 5px;
  text-overflow: ellipsis;
+ max-height: 50px;
 `;
 const Img = styled.img`
  width: 100%;
