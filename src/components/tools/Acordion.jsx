@@ -29,7 +29,7 @@ const AccordionItem = styled.div`
 `;
 
 const AccordionContent = styled.div`
- display: ${props => (props.isOpen ? "block" : "none")};
+ display: ${props => props.is_open};
  width: 100%;
  max-width: 880px;
  background-color: #fff;
@@ -87,7 +87,9 @@ function AccordionMenu({ titulo, contenido }) {
      )}
     </TituloContainer>
    </AccordionItem>
-   <AccordionContent isOpen={isOpen}>{contenido}</AccordionContent>
+   <AccordionContent is_open={isOpen ? "block" : "none"}>
+    {contenido}
+   </AccordionContent>
   </AccordionContainer>
  );
 }

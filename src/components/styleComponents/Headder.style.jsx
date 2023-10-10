@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const BackgroundRaro = styled.div`
  position: relative;
  background: #63c7b2;
- height: 650px;
+ height: 651px;
  width: 1444px;
  z-index: -1;
  top: 0px;
  @media (max-width: 768px) {
-  height: 700.02px;
-  width: 100%;
+  height: 1000.02px;
+  margin-bottom: 25px;
  }
 `;
 
@@ -220,7 +220,7 @@ export const SectionRigth = styled.div`
  padding: 50px 38px;
  z-index: 5;
  @media (max-width: 768px) {
-  padding: 22px 18px;
+  padding: 20px 18px;
   max-width: 350px;
   position: absolute;
   top: 295px;
@@ -260,7 +260,7 @@ export const Ph = styled.p`
  margin: 0;
  @media (max-width: 768px) {
   width: 354px;
-  padding-bottom: 7px;
+  padding-bottom: 25px;
 
   padding-top: 7px;
  }
@@ -304,7 +304,7 @@ export const ItemSectionMobile = styled(ItemSection)`
 `;
 export const Libreta2 = styled.img`
  position: absolute;
- top: 350.77px;
+ top: 550.77px;
  width: 107.92px;
  height: 148.97px;
  left: 50px;
@@ -315,7 +315,7 @@ export const Afila2 = styled.img`
  position: absolute;
  width: 113.87px;
  height: 104.95px;
- top: 540.77px;
+ top: 535.77px;
  right: 50px;
  z-index: -1;
 `;
@@ -323,14 +323,14 @@ export const Cocacola2 = styled.img`
  width: 70.65px;
  height: 196.1px;
  position: absolute;
- top: 350.77px;
+ top: 550.77px;
  right: 150px;
 `;
 export const Usb2 = styled.img`
  width: 170.18px;
  height: 124.96px;
  position: absolute;
- top: 400.77px;
+ top: 600.77px;
  right: -10px;
  transform: rotate(-10.08deg);
 `;
@@ -338,7 +338,7 @@ export const Jarron2 = styled.img`
  width: 86.96px;
  height: 153.89px;
  position: absolute;
- top: 380.77px;
+ top: 580.77px;
  left: -5px;
 `;
 export const ContendorItem = styled.div`

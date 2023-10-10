@@ -56,10 +56,12 @@ const ProductosDisponible = () => {
 
  const pedidosBack = async () => {
   const respuesta = await fetch(
-   `https://regalocompra.com/api/v1/productos/8/0`
+   `https://regalocompra.com/api/v1/productos/8/${count}`
   );
   const data = await respuesta.json();
-  setPedidos(prevPedidos => [...prevPedidos, ...data.productos]);
+  if (data.productos.length > 0) {
+   setPedidos(prevPedidos => [...prevPedidos, ...data.productos]);
+  }
  };
 
  useEffect(() => {
@@ -69,8 +71,8 @@ const ProductosDisponible = () => {
  return (
   <Container>
    <ItemContainer>
-    {pedidos.map(producto => {
-     return <Card producto={producto} />;
+    {pedidos.map((producto, index) => {
+     return <Card key={index} producto={producto} />;
     })}
    </ItemContainer>
    <BtnMore

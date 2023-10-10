@@ -117,7 +117,7 @@ const Modal = ({ setOpen, producto }) => {
    }
   };
   fetch("https://regalocompra.com/api/v1/registro", options).then(res =>
-   console.log(res)
+   setOpen(false)
   );
  };
 

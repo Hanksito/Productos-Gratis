@@ -13,7 +13,7 @@ const ContenedorPadre = styled.div`
 const WhatsappIcon = styled.div`
  position: fixed;
  bottom: 20px;
- right: 20px;
+ right: 20%;
  z-index: 999;
  max-width: 1000px;
 `;
