@@ -52,7 +52,13 @@ const BtnMore = styled.button`
 
 const ProductosDisponible = () => {
  const [count, setCount] = useState(0);
- const [pedidos, setPedidos] = useState([]);
+ const [pedidos, setPedidos] = useState([
+  {
+   texto: "",
+   img: "",
+   id: 1
+  }
+ ]);
 
  const pedidosBack = async () => {
   const respuesta = await fetch(

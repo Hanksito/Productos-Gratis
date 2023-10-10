@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import styled from "styled-components";
+import Swal from "sweetalert2";
 
 const ContainerModal = styled.div`
  background-color: rgba(27, 40, 69, 0.9);
@@ -14,6 +15,10 @@ const ContainerModal = styled.div`
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
+ .swal2-popup {
+  max-width: 90%;
+  text-align: center;
+ }
 `;
 const ModalContent = styled.div`
  max-width: 590px;
@@ -116,9 +121,38 @@ const Modal = ({ setOpen, producto }) => {
     "Content-Type": "application/json"
    }
   };
-  fetch("https://regalocompra.com/api/v1/registro", options).then(res =>
-   setOpen(false)
-  );
+  fetch("https://regalocompra.com/api/v1/registro", options).then(res => {
+   if (res.mensajes.length > 0) {
+    Swal.fire({
+     title: "Error en el formulario",
+     text: "Por favor, verifica los campos marcados como incorrectos.",
+     icon: "error",
+     confirmButtonText: "Aceptar",
+     customClass: {
+      popup: "custom-swal-popup",
+      title: "custom-swal-title",
+      content: "custom-swal-content"
+     }
+    });
+    return;
+   }
+   if (res.mensajes.length > 0) {
+    Swal.fire({
+     title: "Registro exitoso",
+     text: "El registro se ha realizado con éxito.",
+     icon: "success",
+     confirmButtonText: "Aceptar",
+     customClass: {
+      confirmButton: "custom-confirm-button"
+     }
+    }).then(result => {
+     if (result.isConfirmed) {
+      setOpen(false);
+     }
+    });
+    return;
+   }
+  });
  };
 
  return (
