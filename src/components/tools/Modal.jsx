@@ -33,6 +33,11 @@ const ModalContent = styled.div`
  background: linear-gradient(0deg, #1b2845, #1b2845),
   linear-gradient(0deg, #7494ea, #7494ea);
  border: 8px solid #7494ea;
+ .custom-popup-class {
+  max-width: 90%;
+  text-align: center;
+  z-index: 999999;
+ }
 `;
 const CloseIcon = styled.div`
  display: flex;
