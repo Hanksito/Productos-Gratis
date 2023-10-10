@@ -125,6 +125,7 @@ const Modal = ({ setOpen, producto }) => {
       title: "Registro exitoso",
       text: "El registro se ha realizado con éxito.",
       icon: "success",
+      position: 'top',
       confirmButtonText: "Aceptar",
       customClass: {
        container: "custom-popup-class"
@@ -139,6 +140,7 @@ const Modal = ({ setOpen, producto }) => {
       title: "Error en el formulario",
       text: "Por favor, verifica los campos marcados como incorrectos.",
       icon: "error",
+      position: 'top',
       confirmButtonText: "Aceptar",
       customClass: {
        container: "custom-popup-class"
@@ -152,6 +154,7 @@ const Modal = ({ setOpen, producto }) => {
      title: "Error en la solicitud",
      text: "Hubo un problema al procesar la solicitud.",
      icon: "error",
+     position: "top",
      confirmButtonText: "Aceptar",
      customClass: {
       container: "custom-popup-class"
