@@ -15,11 +15,6 @@ const ContainerModal = styled.div`
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- .custom-popup-class {
-  max-width: 90%;
-  text-align: center;
-  z-index: 999999;
- }
 `;
 const ModalContent = styled.div`
  max-width: 590px;
@@ -33,11 +28,6 @@ const ModalContent = styled.div`
  background: linear-gradient(0deg, #1b2845, #1b2845),
   linear-gradient(0deg, #7494ea, #7494ea);
  border: 8px solid #7494ea;
- .custom-popup-class {
-  max-width: 90%;
-  text-align: center;
-  z-index: 999999;
- }
 `;
 const CloseIcon = styled.div`
  display: flex;
@@ -137,7 +127,7 @@ const Modal = ({ setOpen, producto }) => {
       icon: "success",
       confirmButtonText: "Aceptar",
       customClass: {
-       popup: "custom-popup-class"
+       container: "custom-popup-class"
       }
      }).then(result => {
       if (result.isConfirmed) {
@@ -151,7 +141,7 @@ const Modal = ({ setOpen, producto }) => {
       icon: "error",
       confirmButtonText: "Aceptar",
       customClass: {
-       popup: "custom-popup-class"
+       container: "custom-popup-class"
       }
      });
     }
@@ -164,7 +154,7 @@ const Modal = ({ setOpen, producto }) => {
      icon: "error",
      confirmButtonText: "Aceptar",
      customClass: {
-      popup: "custom-popup-class"
+      container: "custom-popup-class"
      }
     });
    });
