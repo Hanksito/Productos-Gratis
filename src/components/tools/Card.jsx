@@ -66,26 +66,14 @@ const Card = ({ producto }) => {
  const [open, setOpen] = useState(false);
  const { id, texto, foto } = producto;
 
- const recortarTexto = (str, long) => {
-  if (texto.length > longitudMaxima) {
-   const palabras = text.split(" ");
-   let textoRecortado = "";
-   palabras.forEach(palabra => {
-    if (textoRecortado.length + palabra.length + 1 <= longitudMaxima) {
-     textoRecortado += palabra + " ";
-    }
-   });
-   return textoRecortado.trim() + "...";
-  }
-  return texto;
- };
+ c;
  return (
   <CardContainer>
    {open && <Modal setOpen={setOpen} producto={producto} />}
    <ImgContainer>
     <Img src={foto} alt={texto} />
    </ImgContainer>
-   <PCard>{recortarTexto(texto, 50)}</PCard>
+   <PCard>{texto}</PCard>
    <Btn
     onClick={() => {
      setOpen(true);
