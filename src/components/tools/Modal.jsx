@@ -18,6 +18,7 @@ const ContainerModal = styled.div`
  .swal2-popup {
   max-width: 90%;
   text-align: center;
+  z-index: 999999;
  }
 `;
 const ModalContent = styled.div`
