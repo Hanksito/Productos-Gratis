@@ -121,38 +121,40 @@ const Modal = ({ setOpen, producto }) => {
     "Content-Type": "application/json"
    }
   };
-  fetch("https://regalocompra.com/api/v1/registro", options).then(res => {
-   if (res.mensajes.length > 0) {
-    Swal.fire({
-     title: "Error en el formulario",
-     text: "Por favor, verifica los campos marcados como incorrectos.",
-     icon: "error",
-     confirmButtonText: "Aceptar",
-     customClass: {
-      popup: "custom-swal-popup",
-      title: "custom-swal-title",
-      content: "custom-swal-content"
-     }
-    });
-    return;
-   }
-   if (res.mensajes.length > 0) {
-    Swal.fire({
-     title: "Registro exitoso",
-     text: "El registro se ha realizado con éxito.",
-     icon: "success",
-     confirmButtonText: "Aceptar",
-     customClass: {
-      confirmButton: "custom-confirm-button"
-     }
-    }).then(result => {
-     if (result.isConfirmed) {
-      setOpen(false);
-     }
-    });
-    return;
-   }
-  });
+  fetch("https://regalocompra.com/api/v1/registro", options)
+   .then(res => res.json())
+   .then(data => {
+    if (data.mensajes.length > 0) {
+     Swal.fire({
+      title: "Error en el formulario",
+      text: "Por favor, verifica los campos marcados como incorrectos.",
+      icon: "error",
+      confirmButtonText: "Aceptar",
+      customClass: {
+       popup: "custom-swal-popup",
+       title: "custom-swal-title",
+       content: "custom-swal-content"
+      }
+     });
+     return;
+    }
+    if (data.mensajes.length > 0) {
+     Swal.fire({
+      title: "Registro exitoso",
+      text: "El registro se ha realizado con éxito.",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+      customClass: {
+       confirmButton: "custom-confirm-button"
+      }
+     }).then(result => {
+      if (result.isConfirmed) {
+       setOpen(false);
+      }
+     });
+     return;
+    }
+   });
  };
 
  return (
