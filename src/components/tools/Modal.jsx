@@ -15,7 +15,7 @@ const ContainerModal = styled.div`
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
- .swal2-popup {
+ .custom-popup-class {
   max-width: 90%;
   text-align: center;
   z-index: 999999;
@@ -130,7 +130,10 @@ const Modal = ({ setOpen, producto }) => {
       title: "Registro exitoso",
       text: "El registro se ha realizado con éxito.",
       icon: "success",
-      confirmButtonText: "Aceptar"
+      confirmButtonText: "Aceptar",
+      customClass: {
+       popup: "custom-popup-class"
+      }
      }).then(result => {
       if (result.isConfirmed) {
        setOpen(false);
@@ -141,7 +144,10 @@ const Modal = ({ setOpen, producto }) => {
       title: "Error en el formulario",
       text: "Por favor, verifica los campos marcados como incorrectos.",
       icon: "error",
-      confirmButtonText: "Aceptar"
+      confirmButtonText: "Aceptar",
+      customClass: {
+       popup: "custom-popup-class"
+      }
      });
     }
    })
@@ -151,10 +157,13 @@ const Modal = ({ setOpen, producto }) => {
      title: "Error en la solicitud",
      text: "Hubo un problema al procesar la solicitud.",
      icon: "error",
-     confirmButtonText: "Aceptar"
+     confirmButtonText: "Aceptar",
+     customClass: {
+      popup: "custom-popup-class"
+     }
     });
    });
- }
+ };
  return (
   <ContainerModal>
    <ModalContent>
