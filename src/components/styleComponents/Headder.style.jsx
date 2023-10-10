@@ -18,7 +18,7 @@ export const SVGWrapper = styled.div`
  bottom: -6px;
  left: 0;
  right: 0;
- width: 100%;
+ width: 101%;
  height: auto;
  z-index: -1;
  @media (max-width: 768px) {
