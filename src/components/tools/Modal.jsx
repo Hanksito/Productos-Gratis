@@ -104,6 +104,8 @@ const SubmitButton = styled.button`
  border-radius: 6px;
  padding: 20px, 30px, 20px, 30px;
 `;
+
+
 const Modal = ({ setOpen, producto }) => {
  const { register, handleSubmit } = useForm();
 
@@ -189,7 +191,7 @@ const Modal = ({ setOpen, producto }) => {
       <ContainerInputs>
        <InputForm
         type="text"
-        placeholder="Nombres y apellido"
+        placeholder="Nombre"
         required
         {...register("nombre")}
        />

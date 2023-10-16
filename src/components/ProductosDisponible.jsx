@@ -56,7 +56,7 @@ const ProductosDisponible = () => {
 
  const pedidosBack = async () => {
   const respuesta = await fetch(
-   `https://regalocompra.com/api/v1/productos/8/${count}`
+   `https://regalocompra.com/api/v1/productos/100/${count}`
   );
   const data = await respuesta.json();
   if (data.productos.length > 0) {
@@ -76,12 +76,12 @@ const ProductosDisponible = () => {
      return <Card key={index} producto={producto} />;
     })}
    </ItemContainer>
-   <BtnMore
+   {/*<BtnMore
     onClick={() => {
      setCount(count + 1);
     }}>
     Ver más productos
-   </BtnMore>
+   </BtnMore>*/}
   </Container>
  );
 };

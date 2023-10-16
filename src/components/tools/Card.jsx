@@ -3,6 +3,10 @@ import coca from "../../assets/coca.svg";
 import { useState, useEffect } from "react";
 import Modal from "./Modal";
 
+const Enlace = styled.a`
+ text-decoration:none;
+ pointer:hand;
+ `;
 const CardContainer = styled.div`
  min-width: 285px;
  max-width: 290px;
@@ -66,18 +70,24 @@ const BtnText = styled.span`
 
 const Card = ({ producto }) => {
  const [open, setOpen] = useState(false);
- const { id, texto, foto } = producto;
+ const { id, texto, foto,link } = producto;
  return (
   <CardContainer>
    {open && <Modal setOpen={setOpen} producto={producto} />}
+   <Enlace href={`${link}`}>
    <ImgContainer>
     <Img src={foto} alt={texto} />
    </ImgContainer>
+   </Enlace>
    <PCard>{texto}</PCard>
-   <Btn
-    onClick={() => {
-     setOpen(true);
-    }}>
+   <Enlace
+    href={`https://api.whatsapp.com/send?phone=621315087&text=Hola, me mandais el bizum para comprar ${texto} con el enlace: ${link}`}
+    target="_blank"
+    rel="noopener noreferrer">
+   <Btn>
+
+
+
     <BtnText>Lo quiero</BtnText>
 
     <svg
@@ -92,6 +102,7 @@ const Card = ({ producto }) => {
      />
     </svg>
    </Btn>
+   </Enlace>
   </CardContainer>
  );
 };
