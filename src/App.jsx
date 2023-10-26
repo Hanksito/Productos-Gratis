@@ -52,7 +52,7 @@ function App() {
    <ContenedorPadre>
     <WhatsappIcon>
      <a
-      href="https://api.whatsapp.com/send?phone=621315087"
+      href="https://t.me/Presentfory"
       target="_blank"
       rel="noopener noreferrer">
       <IconImage src={whatsapp} alt="WhatsApp" />

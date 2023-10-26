@@ -81,7 +81,7 @@ const Card = ({ producto }) => {
    </Enlace>
    <PCard>{texto}</PCard>
    <Enlace
-    href={`https://t.me/+1N8gr0u4AWM5OTgx`}
+    href={`https://t.me/Presentfory`}
     target="_blank"
     rel="noopener noreferrer">
    <Btn>
