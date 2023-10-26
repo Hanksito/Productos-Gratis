@@ -81,7 +81,7 @@ const Card = ({ producto }) => {
    </Enlace>
    <PCard>{texto}</PCard>
    <Enlace
-    href={`https://api.whatsapp.com/send?phone=621315087`}
+    href={`https://t.me/+1N8gr0u4AWM5OTgx`}
     target="_blank"
     rel="noopener noreferrer">
    <Btn>
