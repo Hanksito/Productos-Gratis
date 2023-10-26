@@ -59,7 +59,7 @@ const Footer = () => {
   <ContainerFooter>
    <FooterTop>
     ¿Tienes alguna pregunta o necesitas ayuda adicional? No dudes en
-    contactarnos a través de correo@mail.com o consulta nuestras Preguntas
+    contactarnos a través de <span style={{fontWeight:"500", color:"#63c7b2"}}>regalocomprainfo@gmail.com</span> o consulta nuestras Preguntas
     Frecuentes para obtener más información sobre el proceso de reembolso.
    </FooterTop>
    <FooterDown>

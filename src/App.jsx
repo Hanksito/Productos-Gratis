@@ -50,14 +50,14 @@ function App() {
     <Footer />
    </ContenedorPadre>
    <ContenedorPadre>
-    <WhatsappIcon>
+    {/* <WhatsappIcon>
      <a
       href="https://t.me/Presentfory"
       target="_blank"
       rel="noopener noreferrer">
       <IconImage src={whatsapp} alt="WhatsApp" />
      </a>
-    </WhatsappIcon>
+    </WhatsappIcon> */}
    </ContenedorPadre>
   </>
  );

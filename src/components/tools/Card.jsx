@@ -80,10 +80,7 @@ const Card = ({ producto }) => {
    </ImgContainer>
    </Enlace>
    <PCard>{texto}</PCard>
-   <Enlace
-    href={`https://t.me/Presentfory`}
-    target="_blank"
-    rel="noopener noreferrer">
+   
    <Btn>
 
 
@@ -102,7 +99,7 @@ const Card = ({ producto }) => {
      />
     </svg>
    </Btn>
-   </Enlace>
+  
   </CardContainer>
  );
 };
