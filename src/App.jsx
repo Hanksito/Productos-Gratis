@@ -3,7 +3,7 @@ import Headder from "./components/Headder";
 import ProductosDisponible from "./components/ProductosDisponible";
 import PreguntasFrecuentes from "./components/PreguntasFrecuentes";
 import Footer from "./components/Footer";
-import whatsapp from "./assets/whatsapp.svg";
+import whatsapp from "./assets/telegram.svg";
 
 const ContenedorPadre = styled.div`
  display: flex;
